@@ -12,6 +12,7 @@ const loanRoutes = require('./src/server/routes/loanRoutes');
 const fdRoutes = require('./src/server/routes/fdRoutes');
 const virtualCardRoutes = require('./src/server/routes/virtualCardRoutes');
 const dashboardRoutes = require('./src/server/routes/dashboardRoutes');
+const rbacOnboardingRoutes = require('./src/server/routes/rbacOnboardingRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -27,10 +28,6 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Serve static frontend dist if available
-const distPath = path.join(__dirname, 'dist');
-app.use(express.static(distPath));
-
 // Mounting API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/account', accountRoutes);
@@ -39,20 +36,17 @@ app.use('/api/loans', loanRoutes);
 app.use('/api/fd', fdRoutes);
 app.use('/api/virtual-card', virtualCardRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api', rbacOnboardingRoutes);
 
-// Root API route
-app.get('/api', (req, res) => {
-  res.json({
-    status: 'ONLINE',
-    message: 'Nova Crest Bank Unified MERN API is running',
-    version: '2.0.0',
-  });
-});
+// Serve static frontend dist if available (after API routes)
+const distPath = path.join(__dirname, 'dist');
+app.use(express.static(distPath));
 
 // Fallback for SPA routing in production
 app.use((req, res, next) => {
-  if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
-    return next();
+  const url = req.originalUrl || req.url || '';
+  if (url.startsWith('/api') || url.startsWith('/uploads')) {
+    return res.status(404).json({ message: `API Endpoint '${url}' not found.` });
   }
   res.sendFile(path.join(distPath, 'index.html'), (err) => {
     if (err) {

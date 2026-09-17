@@ -1,0 +1,77 @@
+.employee-dashboard-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px;
+}
+
+.dashboard-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-header-flex h2 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-header-flex .subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.btn-refresh {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-modal-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  border-color: var(--border-glow);
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.qr-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px dashed var(--border-glass);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.qr-icon {
+  font-size: 32px;
+  color: var(--accent-cyan);
+}
+
+.qr-body p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.highlight-code {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--accent-cyan);
+  border: 1px stroke var(--border-glass);
+}
+
+.btn-approve {
+  padding: 8px 14px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.my-3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}

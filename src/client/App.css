@@ -4,27 +4,42 @@
   flex-direction: column;
 }
 
+.app-body {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
 .main-content {
   flex: 1;
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 24px;
+  margin-left: 270px;
+  max-width: 1350px;
+  width: calc(100% - 270px);
+  padding: 30px 24px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 16px;
+  }
 }
 
 .page-header {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .page-title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .page-subtitle {
   color: var(--text-muted);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Alert Boxes */
@@ -54,4 +69,24 @@
   background: rgba(99, 102, 241, 0.15);
   border: 1px solid rgba(99, 102, 241, 0.3);
   color: #818cf8;
+}
+
+/* Utility Flex & Alignment */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

@@ -1,0 +1,70 @@
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  padding: 48px;
+  margin-bottom: 32px;
+}
+
+.hero-text-col h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.hero-text-col p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 40px;
+}
+
+.stats-row h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.stats-row span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
