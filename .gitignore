@@ -1,0 +1,54 @@
+# =========================================================================
+# Nova Crest Bank MERN Stack - Root Gitignore Configuration
+# =========================================================================
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+.pnpm-store/
+
+# Production Builds
+client/dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+
+# Server Uploads & Dynamic Storage
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs & Diagnostics
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Code Editor Directories
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.workspace
+
+# Temporary & Cache Files
+.cache/
+.eslintcache
+.vite/
+client/.vite/

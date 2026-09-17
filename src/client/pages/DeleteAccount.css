@@ -1,0 +1,63 @@
+.delete-page-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.delete-card {
+  padding: 36px;
+}
+
+.gradient-text-rose {
+  background: linear-gradient(135deg, #f43f5e 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.warning-banner {
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.warning-icon {
+  font-size: 28px;
+  color: var(--accent-rose);
+  flex-shrink: 0;
+}
+
+.warning-banner h4 {
+  color: #f87171;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.warning-banner p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.delete-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+}

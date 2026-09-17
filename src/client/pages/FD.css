@@ -1,0 +1,80 @@
+.fd-page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fd-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.fd-form-card {
+  padding: 32px;
+}
+
+.fd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calc-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-color: var(--border-glow);
+}
+
+.calc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calc-icon {
+  font-size: 24px;
+  color: var(--accent-amber);
+}
+
+.calc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.calc-divider {
+  height: 1px;
+  background: var(--border-glass);
+  margin: 8px 0;
+}
+
+.calc-result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.maturity-num {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+@media (max-width: 800px) {
+  .fd-grid {
+    grid-template-columns: 1fr;
+  }
+}

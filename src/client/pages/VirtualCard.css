@@ -1,0 +1,168 @@
+.card-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-management-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.card-display-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  perspective: 1000px;
+}
+
+.virtual-card-3d {
+  width: 380px;
+  height: 240px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.virtual-card-3d.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 24px;
+  backface-visibility: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #fff;
+}
+
+.card-blocked {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%) !important;
+  filter: grayscale(80%);
+}
+
+.card-back {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 0;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-bank-name {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.chip-icon {
+  width: 48px;
+  height: 36px;
+  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.card-num-text {
+  font-family: monospace;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.magnetic-strip {
+  width: 100%;
+  height: 45px;
+  background: #000;
+  margin-top: 24px;
+}
+
+.cvv-container {
+  padding: 0 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.cvv-label {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.cvv-box {
+  background: #fff;
+  color: #000;
+  font-family: monospace;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.card-disclaimer {
+  padding: 16px 24px;
+  font-size: 10px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.flip-hint {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-controls-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.control-title {
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .card-management-grid {
+    grid-template-columns: 1fr;
+  }
+  .virtual-card-3d {
+    width: 320px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Crest Shield -->
+  <path d="M50,8 L85,22 V48 C85,70 50,92 50,92 C50,92 15,70 15,48 V22 Z" fill="url(#grad)" rx="10" />
+  <!-- Inner Shield Inset -->
+  <path d="M50,14 L78,26 V48 C78,65 50,83 50,83 C50,83 22,65 22,48 V26 Z" fill="#0B0F19" opacity="0.9" />
+  <!-- Stylized Monogram N & C Crest Peaks -->
+  <path d="M34,62 V36 L50,56 L66,36 V62" fill="none" stroke="url(#grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="50" cy="28" r="4" fill="url(#gold)" />
+</svg>

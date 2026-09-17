@@ -1,0 +1,74 @@
+.transaction-page-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.txn-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.txn-form-card {
+  padding: 32px;
+}
+
+.txn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.btn-rose {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  box-shadow: 0 10px 20px -5px rgba(244, 63, 94, 0.4);
+}
+
+.btn-rose:hover {
+  box-shadow: 0 15px 30px -5px rgba(244, 63, 94, 0.6);
+}
+
+.receipt-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-color: var(--border-glow);
+}
+
+.receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px dashed var(--border-glass);
+  padding-bottom: 16px;
+}
+
+.receipt-icon {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.receipt-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 768px) {
+  .txn-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
